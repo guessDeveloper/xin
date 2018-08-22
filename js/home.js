@@ -128,6 +128,7 @@ function coverCarousselEl() {
 
     $('.banner-img').addClass('hide').removeClass('show');
     pagatioin()
+    textFol()
     setTimeout(function () {
 
         		$('.banner-img').removeClass('displayBlock').removeClass('hide show');
@@ -148,6 +149,14 @@ function coverCarousselEl() {
 
 };
 
+//文字轮播
+function textFol(){
+    $('.des-bigbox').removeClass('active')
+    setTimeout(function(){
+        $('.des-bigbox').eq(bannerIndex).addClass('active'); 
+    },500)
+   
+}
 function pagatioin() {
     $('.banner-pagation ul li').removeClass('active').eq(bannerIndex).addClass('active')
 }
@@ -193,3 +202,35 @@ $('.page-next').click(function () {
         coverCarousselEl();
     }, 6000)
 })
+
+
+var brandIndex = 0;
+var brandTimer = '';
+var brandlength = $('#section-pr-1 .brand-left .bg').length;
+// 学院品牌轮播
+function brandfloor(){
+    $('#section-pr-1 .brand-left .brand-left-item').removeClass('active');
+    
+    setTimeout(function(){
+        $('#section-pr-1 .brand-left').removeClass('reach')
+        $('#section-pr-1 .brand-left').addClass('reach')
+        $('#section-pr-1 .brand-left .brand-left-item').addClass('active')
+    },1000)
+}
+function brandTextfloor(){
+    $('.brand-right-item').removeClass('disblock').removeClass('show');
+    $('.brand-right-item').eq(brandIndex).addClass('disblock')
+    setTimeout(function(){
+        $('.brand-right-item').addClass('show')
+    },500)
+}
+ brandTextfloor()
+    brandfloor()
+brandTimer = setInterval(function(){
+    brandIndex++
+    if(brandIndex>=brandlength ){
+        brandIndex =0;
+    }
+    brandTextfloor()
+    brandfloor()
+},6000)

@@ -264,7 +264,24 @@
     -webkit-transition: all .25s ease;
     -o-transition: all .25s ease;
     transition: all .25s ease;
+    opacity: 1;
+}
+#section-home .des-big-box{
+    position: relative;
+    width: 100%;
+}
+#section-home .des-big-box .change{
+    display: none;
     opacity: 0;
+     -webkit-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+#section-home .des-big-box .change.disblock{
+    display: block;
+}
+#section-home .des-big-box .change.on{
+     opacity: 1;
 }
 #section-home .des-box{
     -webkit-transition: all .5s ease;
@@ -1225,6 +1242,7 @@
     font-size:.32rem;
     font-weight: 600;
     margin-bottom:.8rem;
+    line-height: .32rem;
 }
 .news-box .right .img-box{
     width:100%;
@@ -1423,6 +1441,7 @@ border-radius:.06rem;
     height:12rem;
     background:#fff;
     position: relative;
+    overflow: hidden;
 }
 .culture-title{
     position: absolute;
@@ -1452,11 +1471,17 @@ border-radius:.06rem;
 }
 .culture-part{
     position: absolute;
-    left:0;
+    width:9.6rem;
+    left:-9.6rem;
     top:2rem;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    opacity: 0;
 }
 .text-right{
-    text-align: right;
+    text-align:left;
 }
 .culture-part:hover .culture-des{
 /*
@@ -1509,6 +1534,7 @@ border-radius:.06rem;
    width:4.32rem;
     line-height: .6rem;
 }
+/*
 .middle2.culture-middle{
     line-height: 2.25rem;
 }
@@ -1521,20 +1547,32 @@ border-radius:.06rem;
 .middle3.culture-middle div{
    font-size:.2rem;
 }
+*/
 .culture-part1{
     width:9.6rem;
+    left:0;
+    top:2rem;
+    opacity: 1;
 }
 .culture-part2{
-    width:6.19rem;
+/*    width:6.19rem;*/
+    transform: scale(.645);
+/*
     top:4rem;
     left:8rem;
+*/   
+    top: 1.5rem;
+    left: 6.5rem;
     z-index: 200;
     opacity: 0;
     box-shadow: 0 0 .5rem rgba(0,0,0,.5);
-     opacity: 0;
+/*     opacity: 0;*/
+    opacity: 1;
+/*
     -webkit-transition: opacity 1000ms cubic-bezier(0.694, 0, 0.335, 1);
     -o-transition: opacity 1000ms cubic-bezier(0.694, 0, 0.335, 1);
     transition: opacity 1000ms cubic-bezier(0.694, 0, 0.335, 1);
+*/
 }
 .culture.reach .culture-part2{
     opacity: 1;
@@ -1544,10 +1582,33 @@ border-radius:.06rem;
 }
 .culture-part3{
     position: absolute;
-    width:3.55rem;
+/*    width:3.55rem;*/
+    transform: scale(.369);
     left: auto;
+    opacity: 1;
+/*
     top:4.33rem;
     right:.67rem;
+*/  
+    top: 1.33rem;
+    /* right: .67rem; */
+    left: 12rem;
+    border-radius: 0.06rem;
+    z-index: 100;
+}
+.culture-part4{
+    position: absolute;
+/*    width:3.55rem;*/
+    transform: scale(0);
+    left: auto;
+    opacity: 0;
+/*
+    top:4.33rem;
+    right:.67rem;
+*/  
+    top: 1.33rem;
+    /* right: .67rem; */
+    left: 15rem;
     border-radius: 0.06rem;
     z-index: 100;
 }

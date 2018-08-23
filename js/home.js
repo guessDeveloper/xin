@@ -151,9 +151,10 @@ function coverCarousselEl() {
 
 //文字轮播
 function textFol(){
-    $('.des-bigbox').removeClass('active')
+    $('.des-big-box .change').removeClass('disblock on')
+    $('.des-big-box .change').eq(bannerIndex).addClass('disblock')
     setTimeout(function(){
-        $('.des-bigbox').eq(bannerIndex).addClass('active'); 
+        $('.des-big-box .change').eq(bannerIndex).addClass('on'); 
     },500)
    
 }
@@ -234,3 +235,42 @@ brandTimer = setInterval(function(){
     brandTextfloor()
     brandfloor()
 },6000)
+
+//校园文化轮播
+function cultureFloor(){
+    var classlist= ['culture-part1','culture-part2','culture-part3','culture-part4'];
+    this.child = $('.culture-part')
+    var length = this.child.length;
+    this.Nowlist = [];
+    var count = 5;
+    this.init = function(){
+        for(var i = 0;i<length;i++){
+            this.Nowlist[i] = i;
+        }
+        this.draw();
+        var _this = this;
+        setInterval(function () {
+            _this.move()
+        }, 5000)
+    }
+    this.move = function(){
+        this.Nowlist.push(this.Nowlist.shift())
+        this.draw();
+    }
+    this.draw = function(){
+        this.child.removeClass(classlist.join(' '));
+        for (var i = 0; i < count; i++) {
+            this.child.eq(this.Nowlist[i]).addClass(classlist[i])
+        }
+    }
+}
+var culter = new cultureFloor();
+culter.init();
+
+$('.culture-middle .text-right').each(function(index,item){
+    var html = $(item).html();
+    if(html.length>28){
+        $(item).html(html.slice(0,28)+'...')
+       }
+})
+

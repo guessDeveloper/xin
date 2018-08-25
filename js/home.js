@@ -243,15 +243,24 @@ function cultureFloor(){
     var length = this.child.length;
     this.Nowlist = [];
     var count = 5;
+    this.timer = '';
     this.init = function(){
         for(var i = 0;i<length;i++){
             this.Nowlist[i] = i;
         }
         this.draw();
         var _this = this;
-        setInterval(function () {
+        this.timer = setInterval(function () {
             _this.move()
         }, 5000)
+        this.child.on('mouseover',function(){
+            clearInterval(_this.timer)
+        })
+        this.child.on('mouseleave',function(){
+            _this.timer = setInterval(function () {
+            _this.move()
+        },  5000)
+        })
     }
     this.move = function(){
         this.Nowlist.push(this.Nowlist.shift())
@@ -263,6 +272,7 @@ function cultureFloor(){
             this.child.eq(this.Nowlist[i]).addClass(classlist[i])
         }
     }
+    
 }
 var culter = new cultureFloor();
 culter.init();

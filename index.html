@@ -22,7 +22,8 @@
                         重要新闻
                     </div>
                     <div class="des-big-box">
-                        <div class="change">
+
+                        <div class="change" data-href="http://www.baidu.com">
                             <div class="des-title">
                                 第一届“金丝路”杯影视作品大赛
                             </div>
@@ -30,7 +31,7 @@
                                 暨校际作品联展成功举办
                             </div>
                         </div>
-                        <div class="change">
+                        <div class="change" data-href="http://www.google.com">
                             <div class="des-title">
                                 第二届“金丝路”杯影视作品大赛
                             </div>
@@ -38,7 +39,8 @@
                                 暨校际作品联展成功举办
                             </div>
                         </div>
-                        <div class="change">
+<!--                        data-href  详情页链接-->
+                        <div class="change" data-href="http://www.1992ui.com">
                             <div class="des-title">
                                 第三届“金丝路”杯影视作品大赛
                             </div>
@@ -47,9 +49,11 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn delay show" href="https://www.agence-me.com/us/quotes-website">
+<!--                    根据标签上的 data-href 属性  按钮切换链接-->
+                    <a class="btn delay show" href="www.baidu.com" id="bannerBtn">
                         <p class="anim-btnHover-2"><span>查</span><span>看</span><span>详</span><span>情</span></p>
                     </a>
+                   
                 </div>
             </div>
 
@@ -439,20 +443,27 @@
     <div class="brand" id="section-pr-1">
         <div class="brand-left">
             <div class="brand-left-item">
-                <div class="bg"></div>
+                <div class="bg">
+                    <img src="img/brand-left.png" alt="">
+                </div>
             </div>
             <div class="brand-left-item">
-                <div class="bg"></div>
+                <div class="bg">
+                    <img src="img/brand-left.png" alt="">
+                </div>
             </div>
             <div class="brand-left-item">
-                <div class="bg"></div>
+                <div class="bg">
+                    <img src="img/brand-left.png" alt="">
+                </div>
             </div>
         </div>
         <div class="brand-right">
             <div class="brand-title">
                 <span></span>学院品牌
             </div>
-            <div class="brand-right-item">
+<!--            data-href 文章详情地址-->
+            <div class="brand-right-item" data-href="http://www.baidu.com">
 
                 <div class="brand-content">
                     <div class="brand-content-title">国际青年导演交流会</div>
@@ -463,7 +474,7 @@
 
                 </div>
             </div>
-            <div class="brand-right-item">
+            <div class="brand-right-item" data-href="http://www.google.com">
 
                 <div class="brand-content">
                     <div class="brand-content-title">国际青年导演交流会</div>
@@ -474,23 +485,22 @@
 
                 </div>
             </div>
-            <div class="brand-right-item">
+            <div class="brand-right-item" data-href="http://www.1992ui.com">
 
                 <div class="brand-content">
                     <div class="brand-content-title">国际青年导演交流会</div>
                     <div class="brand-des">
                         国际青年导演交流会是西安工程大学创办的较为成熟的新媒体影视交流平台。该平台具有较强的专业粘合度，吸引了来自“一带一路”沿线15个国家的40位青年导演及制片人来华展映作品并交流互动，提升了沿线国家青年导演的彼此了解。在向其展示了兼具传统与时尚特色的当今中国的同时，也有效扩大了对外朋友圈。
                     </div>
-
-
                 </div>
             </div>
-            <a href="" class="brand-detail">查看详情 </a>
+<!--            href 地址根据 每个 brand-right-item 的 data-href 属性切换-->
+            <a href="" class="brand-detail" id="brandBtn">查看详情 </a>
         </div>
     </div>
     <div class="culture">
         <div class="culture-title" data-parallax="{&quot;y&quot;:-40, &quot;smoothness&quot;: 20}"><span></span>校园文化</div>
-        <div class="culture-part culture-part1">
+        <a class="culture-part culture-part1">
             <div class="culture-part-box">
                 <img src="img/news-img.png" alt="">
                 <div class="culture-des">
@@ -500,8 +510,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="culture-part culture-part2">
+        </a>
+        <a class="culture-part culture-part2">
             <div class="culture-part-box">
                 <img src="img/news-img.png" alt="">
                 <div class="culture-des">
@@ -511,8 +521,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="culture-part culture-part3">
+        </a>
+        <a class="culture-part culture-part3">
             <div class="culture-part-box">
                 <img src="img/news-img.png" alt="">
                 <div class="culture-des">
@@ -522,8 +532,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="culture-part">
+        </a>
+        <a class="culture-part">
             <div class="culture-part-box">
                 <img src="img/news-img.png" alt="">
                 <div class="culture-des">
@@ -533,9 +543,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
         <!--        复制层-->
-        <div class="culture-part culture-part1">
+        <a class="culture-part culture-part1">
             <div class="culture-part-box">
                 <img src="img/news-img.png" alt="">
                 <div class="culture-des">
@@ -545,8 +555,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="culture-part culture-part2">
+        </a>
+        <a class="culture-part culture-part2">
             <div class="culture-part-box">
                 <img src="img/news-img.png" alt="">
                 <div class="culture-des">
@@ -556,8 +566,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="culture-part culture-part3">
+        </a>
+        <a class="culture-part culture-part3">
             <div class="culture-part-box">
                 <img src="img/news-img.png" alt="">
                 <div class="culture-des">
@@ -567,8 +577,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="culture-part">
+        </a>
+        <a class="culture-part">
             <div class="culture-part-box">
                 <img src="img/news-img.png" alt="">
                 <div class="culture-des">
@@ -578,14 +588,14 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
 
     </div>
     <div class="work">
         <div class="work-title">作品展示</div>
         <div class="work-box">
             <div class="work-list">
-                <div class="work-item">
+                <a class="work-item" href="">
                     <img src="img/work1.png" alt="">
                     <div class="work-des">
                         <span>
@@ -593,8 +603,8 @@
                         <div class="tip">服装设计</div>
                         </span>
                     </div>
-                </div>
-                <div class="work-item">
+                </a>
+                <a class="work-item">
                     <img src="img/work2.png" alt="">
                     <div class="work-des">
                         <span>
@@ -602,8 +612,8 @@
                         <div class="tip">服装设计</div>
                         </span>
                     </div>
-                </div>
-                <div class="work-item">
+                </a>
+                <a class="work-item">
                     <div class="img-box">
                         <img src="img/work3.png" alt="">
                         <div class="work-des">
@@ -613,8 +623,8 @@
                         </span>
                         </div>
                     </div>
-                </div>
-                <div class="work-item">
+                </a>
+                <a class="work-item">
                     <img src="img/work4.png" alt="">
                     <div class="work-des">
                         <span>
@@ -622,9 +632,9 @@
                         <div class="tip">服装设计</div>
                         </span>
                     </div>
-                </div>
+                </a>
                 <!--                复制层-->
-                <div class="work-item">
+                <a class="work-item">
                     <img src="img/work1.png" alt="">
                     <div class="work-des">
                         <span>
@@ -632,8 +642,8 @@
                         <div class="tip">服装设计</div>
                         </span>
                     </div>
-                </div>
-                <div class="work-item">
+                </a>
+                <a class="work-item">
                     <img src="img/work2.png" alt="">
                     <div class="work-des">
                         <span>
@@ -641,8 +651,8 @@
                         <div class="tip">服装设计</div>
                         </span>
                     </div>
-                </div>
-                <div class="work-item">
+                </a>
+                <a class="work-item">
                     <img src="img/work3.png" alt="">
                     <div class="work-des">
                         <span>
@@ -650,8 +660,8 @@
                         <div class="tip">服装设计</div>
                         </span>
                     </div>
-                </div>
-                <div class="work-item">
+                </a>
+                <a class="work-item">
                     <img src="img/work4.png" alt="">
                     <div class="work-des">
                         <span>
@@ -659,7 +669,7 @@
                         <div class="tip">服装设计</div>
                         </span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>

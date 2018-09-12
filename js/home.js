@@ -153,11 +153,15 @@ function coverCarousselEl() {
 function textFol(){
     $('.des-big-box .change').removeClass('disblock on')
     $('.des-big-box .change').eq(bannerIndex).addClass('disblock')
+    $('#bannerBtn').attr('href',$('.des-big-box .change').eq(bannerIndex).data('href'))
     setTimeout(function(){
         $('.des-big-box .change').eq(bannerIndex).addClass('on'); 
+        $('#bannerBtn').attr('href',('.des-big-box .change').eq(bannerIndex).data('href'))
     },500)
    
 }
+
+
 function pagatioin() {
     $('.banner-pagation ul li').removeClass('active').eq(bannerIndex).addClass('active')
 }
@@ -220,9 +224,11 @@ function brandfloor(){
 }
 function brandTextfloor(){
     $('.brand-right-item').removeClass('disblock').removeClass('show');
-    $('.brand-right-item').eq(brandIndex).addClass('disblock')
+    $('.brand-right-item').eq(brandIndex).addClass('disblock');
+    $('#brandBtn').attr('href',$('.brand-right-item').eq(brandIndex).data('href'))
     setTimeout(function(){
         $('.brand-right-item').addClass('show')
+         $('#brandBtn').attr('href',$('.brand-right-item').eq(brandIndex).data('href'))
     },500)
 }
  brandTextfloor()

@@ -808,9 +808,9 @@ opacity: .5;
     min-width:1280px;
 	top: 0px;
 	left: 0px;
-	padding: 160px 1.3rem 130px 1.3rem;
+	padding: 2.3rem 1.3rem 130px 1.3rem;
 	max-height: 100vh;
-    min-height: 650px;
+    min-height: 100vh;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1465,11 +1465,12 @@ opacity: .5;
 .brand-left .bg{
     width:100%;
     height: 100%;
+    overflow: hidden;
     position: relative;
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
-    background:url(../img/brand-left.png)no-repeat top right;
+/*    background:url(../img/brand-left.png)no-repeat top right;*/
     background-size:cover;
     -webkit-transition: transform 750ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
     -o-transition: transform 750ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -1477,6 +1478,9 @@ opacity: .5;
     transition: -webkit-transform 750ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
     transition: transform 750ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
     transition: transform 750ms cubic-bezier(0.215, 0.610, 0.355, 1.000), -webkit-transform 750ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+.brand-left .bg img{
+    height:100%;
 }
 .brand-left .brand-left-item.active{
     opacity: 1;

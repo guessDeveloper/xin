@@ -156,7 +156,7 @@ function textFol(){
     $('#bannerBtn').attr('href',$('.des-big-box .change').eq(bannerIndex).data('href'))
     setTimeout(function(){
         $('.des-big-box .change').eq(bannerIndex).addClass('on'); 
-        $('#bannerBtn').attr('href',('.des-big-box .change').eq(bannerIndex).data('href'))
+        $('#bannerBtn').attr('href',$('.des-big-box .change').eq(bannerIndex).data('href'))
     },500)
    
 }

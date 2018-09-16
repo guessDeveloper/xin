@@ -1037,6 +1037,7 @@ opacity: .5;
 }
 #nav .content .container-prLink ul li:nth-child(7)
 {
+    width:1.08rem;
     margin-right: .35rem;
 	-webkit-transition-delay: 0.98s;
 	     -o-transition-delay: 0.98s;
@@ -1065,11 +1066,13 @@ opacity: .5;
 }
 #nav .content .container-prLink ul li:nth-child(11)
 { 
+    width:1.08rem;
     margin-right: .35rem;
 	-webkit-transition-delay: 1.3s;
 	     -o-transition-delay: 1.3s;
 	        transition-delay: 1.3s
 }
+
 #nav .content .container-prLink ul li:nth-child(12)
 {
    

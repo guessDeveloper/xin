@@ -219,7 +219,7 @@ function brandfloor(){
     setTimeout(function(){
         $('#section-pr-1 .brand-left').removeClass('reach')
         $('#section-pr-1 .brand-left').addClass('reach')
-        $('#section-pr-1 .brand-left .brand-left-item').addClass('active')
+        $('#section-pr-1 .brand-left .brand-left-item').eq(brandIndex).addClass('active')
     },1000)
 }
 function brandTextfloor(){

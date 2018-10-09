@@ -1671,6 +1671,7 @@ border-radius:.06rem;
     text-align: center;
     height:50%;
     opacity: 0;
+    line-height: 3em;
 /*
     -webkit-transform:translate3d(0,100%,0);
     -moz-transform:translate3d(0,100%,0);
@@ -1692,10 +1693,12 @@ border-radius:.06rem;
     font-size:.3rem;
     color:#fff;
 }
+/*
 .middle1.culture-middle{
     display: block;
     margin:1.43rem 0 0 2.21rem;
 }
+*/
 .middle1.culture-middle div{
    width:4.32rem;
     line-height: .6rem;
